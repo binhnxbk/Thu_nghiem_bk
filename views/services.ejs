@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <%- include('partials/head', { pageTitle: 'Dịch vụ' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="hero" style="padding: 60px 0;">
+    <div class="container hero-content">
+      <h1 style="font-size:28px;">Dịch vụ của <%= company.name %></h1>
+      <p class="slogan-sub">Giải pháp xây dựng toàn diện, từ ý tưởng đến bàn giao công trình.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="services-grid">
+        <% services.forEach(function(s) { %>
+          <div class="service-card">
+            <div class="service-icon"><%= s.icon %></div>
+            <h3><%= s.title %></h3>
+            <p><%= s.desc %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="cta">
+        <h2>Cần tư vấn dịch vụ phù hợp?</h2>
+        <p>Đội ngũ <%= company.name %> luôn sẵn sàng hỗ trợ bạn.</p>
+        <a href="/lien-he" class="btn btn-primary">Liên hệ tư vấn</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "bkgroup-website",
+  "version": "1.0.0",
+  "description": "Website gioi thieu cong ty xay dung BK Group",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ejs": "^3.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

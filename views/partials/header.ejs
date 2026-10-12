@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <img src="/images/logo.svg" alt="<%= company.name %> logo" />
+      <span class="brand-text">BK<span>Group</span></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">&#9776;</button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Trang chủ</a></li>
+        <li><a href="/gioi-thieu" class="<%= page === 'about' ? 'active' : '' %>">Giới thiệu</a></li>
+        <li><a href="/dich-vu" class="<%= page === 'services' ? 'active' : '' %>">Dịch vụ</a></li>
+        <li><a href="/du-an" class="<%= page === 'projects' ? 'active' : '' %>">Dự án</a></li>
+        <li><a href="/lien-he" class="<%= page === 'contact' ? 'active' : '' %>">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

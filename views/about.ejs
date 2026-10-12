@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <%- include('partials/head', { pageTitle: 'Giới thiệu' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="hero" style="padding: 60px 0;">
+    <div class="container hero-content">
+      <h1 style="font-size:28px;">Giới thiệu về <%= company.name %></h1>
+      <p class="slogan-sub"><%= company.sloganMain %></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container about-grid">
+      <div>
+        <h2>Về chúng tôi</h2>
+        <p>
+          <%= company.name %> là doanh nghiệp hoạt động trong lĩnh vực xây dựng dân dụng,
+          công nghiệp và tư vấn thiết kế. Với đội ngũ kỹ sư, kiến trúc sư giàu kinh nghiệm,
+          chúng tôi cam kết mang đến những công trình chất lượng, an toàn và bền vững.
+        </p>
+        <p>
+          Phương châm hoạt động của <%= company.name %> là
+          "<%= company.sloganMain %>" — mỗi công trình được xây dựng trên nền móng vững chắc,
+          quy trình quản trị minh bạch và tầm nhìn phát triển lâu dài.
+        </p>
+        <p style="color:#e09a1f; font-weight:700; font-style:italic;">
+          <%= company.sloganSub %>
+        </p>
+      </div>
+
+      <div class="about-panel">
+        <h3 style="margin-top:0; color:var(--blue-dark);">Vì sao chọn chúng tôi</h3>
+        <ul>
+          <li>Đội ngũ kỹ sư, kiến trúc sư giàu kinh nghiệm thực chiến</li>
+          <li>Quy trình thi công và nghiệm thu rõ ràng, minh bạch</li>
+          <li>Cam kết tiến độ, chất lượng và chi phí đã thỏa thuận</li>
+          <li>Vật liệu xây dựng chính hãng, nguồn gốc rõ ràng</li>
+          <li>Hỗ trợ bảo hành, bảo trì sau bàn giao công trình</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Giá trị cốt lõi</span>
+        <h2>Kim chỉ nam trong mọi hoạt động</h2>
+      </div>
+      <div class="values-grid">
+        <% values.forEach(function(v, i) { %>
+          <div class="value-card">
+            <div class="num">0<%= i + 1 %></div>
+            <h3><%= v.title %></h3>
+            <p><%= v.desc %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Cùng kiến tạo giá trị bền vững</h2>
+        <p>Hãy để <%= company.name %> đồng hành cùng công trình tiếp theo của bạn.</p>
+        <a href="/lien-he" class="btn btn-primary">Liên hệ ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

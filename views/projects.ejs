@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <%- include('partials/head', { pageTitle: 'Dự án' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="hero" style="padding: 60px 0;">
+    <div class="container hero-content">
+      <h1 style="font-size:28px;">Dự án tiêu biểu</h1>
+      <p class="slogan-sub">Một số công trình <%= company.name %> đã triển khai và bàn giao.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="projects-grid">
+        <% projects.forEach(function(p) { %>
+          <div class="project-card">
+            <div class="project-thumb"><%= p.type %></div>
+            <div class="project-body">
+              <span class="tag"><%= p.year %></span>
+              <h3><%= p.title %></h3>
+              <div class="year"><%= p.type %></div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="cta">
+        <h2>Bạn muốn khởi công dự án mới?</h2>
+        <p>Chia sẻ ý tưởng của bạn, <%= company.name %> sẽ tư vấn giải pháp tối ưu.</p>
+        <a href="/lien-he" class="btn btn-primary">Liên hệ ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

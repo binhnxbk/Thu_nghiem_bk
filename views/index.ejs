@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <%- include('partials/head', { pageTitle: 'Trang chủ' }) %>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <img src="/images/logo.svg" alt="<%= company.name %>" class="hero-logo" />
+      <h1><%= company.sloganMain %></h1>
+      <p class="slogan-sub"><%= company.sloganSub %></p>
+      <div class="hero-buttons">
+        <a href="/du-an" class="btn btn-primary">Xem dự án tiêu biểu</a>
+        <a href="/lien-he" class="btn btn-outline">Liên hệ tư vấn</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Giá trị cốt lõi</span>
+        <h2>Nền tảng cho mọi công trình</h2>
+        <p>Ba giá trị xuyên suốt trong từng dự án mà <%= company.name %> thực hiện.</p>
+      </div>
+      <div class="values-grid">
+        <% values.forEach(function(v, i) { %>
+          <div class="value-card">
+            <div class="num">0<%= i + 1 %></div>
+            <h3><%= v.title %></h3>
+            <p><%= v.desc %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Dịch vụ</span>
+        <h2>Giải pháp xây dựng toàn diện</h2>
+        <p>Từ tư vấn thiết kế đến thi công và bàn giao công trình.</p>
+      </div>
+      <div class="services-grid">
+        <% services.slice(0, 6).forEach(function(s) { %>
+          <div class="service-card">
+            <div class="service-icon"><%= s.icon %></div>
+            <h3><%= s.title %></h3>
+            <p><%= s.desc %></p>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num">12<span>+</span></div>
+          <div class="stat-label">Năm kinh nghiệm</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">150<span>+</span></div>
+          <div class="stat-label">Công trình hoàn thành</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">80<span>+</span></div>
+          <div class="stat-label">Kỹ sư &amp; nhân sự</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Khách hàng hài lòng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Dự án</span>
+        <h2>Dự án tiêu biểu</h2>
+        <p>Một số công trình nổi bật <%= company.name %> đã thực hiện.</p>
+      </div>
+      <div class="projects-grid">
+        <% projects.forEach(function(p) { %>
+          <div class="project-card">
+            <div class="project-thumb"><%= p.type %></div>
+            <div class="project-body">
+              <span class="tag"><%= p.year %></span>
+              <h3><%= p.title %></h3>
+              <div class="year"><%= p.type %></div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Bạn đang có một công trình cần triển khai?</h2>
+        <p>Liên hệ ngay để được <%= company.name %> tư vấn giải pháp phù hợp nhất.</p>
+        <a href="/lien-he" class="btn btn-primary">Liên hệ ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

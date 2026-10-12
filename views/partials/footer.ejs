@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-text">BK<span>Group</span></span>
+        <p><%= company.sloganMain %></p>
+        <p><%= company.sloganSub %></p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="/gioi-thieu">Giới thiệu</a></li>
+          <li><a href="/dich-vu">Dịch vụ</a></li>
+          <li><a href="/du-an">Dự án tiêu biểu</a></li>
+          <li><a href="/lien-he">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Thông tin liên hệ</h4>
+        <ul>
+          <li><%= company.address %></li>
+          <li><%= company.phone %></li>
+          <li><%= company.email %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <%= new Date().getFullYear() %> <%= company.name %>. Đã đăng ký bản quyền.
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+  }
+</script>

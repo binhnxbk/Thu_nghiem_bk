@@ -1,0 +1,29 @@
+<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BK Group logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6c343"/>
+      <stop offset="100%" stop-color="#e09a1f"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a5bb8"/>
+      <stop offset="100%" stop-color="#0d3d85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- B shape -->
+  <path d="M10 10 H70 C100 10 115 28 115 48 C115 62 108 72 96 77 C112 82 122 94 122 112 C122 134 104 150 72 150 H10 Z
+           M38 36 V74 H68 C82 74 90 66 90 54 C90 42 82 36 68 36 Z
+           M38 98 V124 H70 C86 124 94 116 94 111 C94 104 86 98 70 98 Z"
+        fill="url(#blue)" fill-rule="evenodd"/>
+
+  <!-- small building silhouette cut into the B -->
+  <path d="M46 120 V70 L58 58 V120 Z M62 120 V50 L74 38 V120 Z" fill="#ffffff"/>
+
+  <!-- K shape -->
+  <path d="M150 10 H178 V72 L228 10 H262 L206 80 L264 150 H230 L178 86 V150 H150 Z" fill="url(#blue)"/>
+  <!-- gold diagonal of K -->
+  <path d="M206 80 L262 10 H296 L238 80 L298 150 H264 Z" fill="url(#gold)"/>
+
+  <!-- Wordmark -->
+  <text x="12" y="146" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="1" fill="transparent">spacer</text>
+</svg>
